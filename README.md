@@ -1,82 +1,110 @@
-# لعبتنا
+لعبتنا
 ### Our game. Our family. Fair play, refereed by AI.
 
-La'batna is a family game-day host. It watches real gameplay through a camera and microphone, checks the rules, and keeps score fairly, so game night ends in laughter instead of arguments.
+La’batna (لعبتنا, “our game”) is an AI-powered family game-day host that turns game night into a fair, friendly competition. Using the device’s camera and microphone, it watches real gameplay, checks the rules, and keeps a transparent score, so families spend less time arguing and more time playing.
 
----
+It runs three separate games for two teams of two players, with four rounds each:
 
-## The problem it solves
-Family games often end in disputes. Who hit the marble? Was that clue too obvious? Was that a goal? La'batna acts as a neutral AI referee that recognises what happened, applies the rules, explains every decision, and keeps a transparent scoreboard.
+Al Teelah: a traditional marble game. Each player has a coloured marble, and the camera tracks the play area to spot hole entries, strikes and fouls.
+Say Less, Guess More: a vague-clue word game. The AI listens to the clues and flags any that are too direct, deducting points when they are.
+Football: a 2v2 match analysed from live or uploaded video, which finds goals, possession and passes, and names an MVP.
 
-## The three games
-Each game is played separately, with **2 teams of 2 players** and **4 rounds**.
+Every decision comes with a clear reason and a spoken or pop-up alert when a rule is broken. The host always has the final say, and the camera focuses on the playing surface rather than faces to protect privacy.
 
-### 1. Al Teelah (التيلة), the marble game
-- Each player has a coloured marble, saved to their name.
-- The camera watches the playing surface only (marbles, holes, starting line), with no faces needed.
-- Tracks hole entries, strikes, turn order and foul throws.
-- Supports the three-hole and straight-line variations.
+## What you need
 
-### 2. Say Less, Guess More
-- One player gives only vague spoken clues, and their teammate guesses the secret word.
-- The AI listens and rates every clue: **Acceptable**, **Borderline** or **Too direct**.
-- A forbidden-words list and a three-level penalty system keep it fair.
+| Requirement | Details |
+|---|---|
+| Account | A free or paid [Base44](https://base44.com) account |
+| Device | A laptop, tablet or phone with a working camera and microphone |
+| Browser | A current version of Chrome, Edge or Safari, with camera and mic permission allowed |
+| Internet | A stable connection (the AI judge needs it) |
+| Play kit | See "Game equipment" below |
 
-### 3. Football (كرة القدم)
-- A 2v2 match, recorded live or uploaded as a video.
-- The AI finds goals, possession, completed passes and visible fouls.
-- Awards an **MVP** based on who had the ball most.
+## Setup
 
-## How it works
-1. **Choose a game.**
-2. **Enter players and teams.** Team A is P1 + P2 and Team B is P3 + P4.
-3. **Review the rules and get ready.**
-4. **Play the round.** See the timer, the current turn and the live score.
-5. **See the AI judge's results.** Every moment comes with a reason.
-6. **Apply or reject.** The host always has the final say.
-7. **View the final results**, then choose another game.
+### 1. Create the app
+1. Sign in to Base44 and start a new app.
+2. Paste the full La'batna build prompt into the chat and send it.
+3. Wait for Base44 to generate the app, then open the **Preview**.
 
-## Scoring at a glance
-| Game | Earns points | Loses points |
-|---|---|---|
-| Al Teelah | Marble in hole +2, strike +3 | Out of turn -1, outside line -1, moving a marble -2 |
-| Say Less, Guess More | Correct guess +3, fast guess +1, clean round +2 | Direct clue -2, repeat violation -3 |
-| Football | Goal +3, five passes +1, round win +3 | Handball -2, foul -2, time wasting -1 |
+### 2. Turn on AI features
+1. Make sure Base44's built-in AI (LLM) integration is enabled for the app.
+2. If file or video upload is offered as an integration, enable it too, for football video analysis.
+3. Test the AI with one clue in Game 2. If you get a real decision with a reason, it's working.
 
-The scoreboard always shows **earned points, bonuses, penalties and final score** separately, with a reason for every deduction.
+### 3. Allow camera and microphone
+1. When the browser asks, choose **Allow** for the camera and microphone.
+2. If you blocked it by mistake, click the lock icon in the address bar, set camera and microphone to **Allow**, then reload the page.
 
-## Fair-play promise
-- The AI only changes the score when it is confident.
-- If it is unsure, it asks the host to confirm.
-- The host can override, undo or adjust any decision.
-- Every event is saved in the **FairPlay Event Log** with a timestamp, reason and evidence.
+### 4. Check the data
+Open the app's database or data tab and confirm that these exist: teams, players, rounds, scores, penalties and the event log. If any is missing, ask Base44 to add it.
 
-## Privacy
-- The camera focuses on the **playing surface, not faces**.
-- The microphone is used only in games that need it.
-- Camera and mic permission is requested first.
-- Recordings are kept only as long as needed for review, unless the host chooses to keep them.
+### 5. Publish (optional)
+Use Base44's **Publish** option to get a shareable link, so you can open the app on a tablet or phone on game day.
 
-## Built with
-- [Base44](https://base44.com) for the app, database and built-in AI integration
-- Browser camera and microphone access
-- Speech-to-text for clue detection
-- Browser speech synthesis for the AI referee's voice
+## Run a game day
+
+1. **Open La'batna** on your laptop or tablet.
+2. **Start Game Day** and choose a game.
+3. **Enter players and teams**: Team A is P1 + P2, Team B is P3 + P4. Save the teams.
+4. **Read the rules** on screen and press **Everyone ready**.
+5. **Play the 4 rounds.** Watch the timer, turns and live score.
+6. **Review the AI judge's results.** Press **Apply AI results** or reject them.
+7. **See the final results**, then choose another game.
+
+### Game-specific setup
+
+**Al Teelah**
+- Give each player a different coloured marble and set the colour beside their name.
+- Mount the camera overhead on a tripod or stand, pointing at the play area only.
+- Calibrate the starting line and holes, and choose the three-hole or line variation.
+
+**Say Less, Guess More**
+- Place the device where the microphone can hear the clue-giver clearly.
+- Show the secret word on the clue-giver's screen only.
+- Play in a quiet room for better speech recognition.
+
+**Football**
+- Set up two goals with cones or tape, and give each team a different coloured bib.
+- Record the match live or upload a video that shows the whole pitch.
+- Press **Apply AI results** after each round to update the score.
+
+## Game equipment
+
+- Al Teelah: glass marbles in 4 clearly different colours, 3 small holes, a starting line (tape works)
+- Say Less, Guess More: a quiet room and a device with a microphone
+- Football: a bright ball, 2 goals (cones are fine), 2 coloured bibs sets, a marked pitch
+- All games: a tripod or stand, and good lighting
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| Camera or mic doesn't start | Allow permission in the browser's address-bar lock icon, then reload |
+| AI result doesn't appear | Check your internet connection, then press regenerate; use manual scoring if it keeps failing |
+| Marble isn't detected | Improve lighting, use a more contrasting marble colour, and recalibrate the play area |
+| Clue marked wrong | Use the host review option to override it, since speech recognition can miss words |
+| Score looks wrong | Use the manual +/- buttons or undo, then check the FairPlay Event Log |
+| Video upload fails | Use a shorter clip or lower resolution, then retry |
+
+## Fair-play and privacy
+
+- The AI changes the score only when it is confident, and the host can override anything.
+- Every decision is logged with a timestamp, reason and evidence.
+- The camera focuses on the play surface, not faces.
+- Audio is used only in games that need it, and recordings are deleted after review unless the host keeps them.
 
 ## Known limitations
-- Camera detection depends on good lighting, a fixed camera and clearly coloured objects.
-- A marble hidden inside a hole, or overlapping marbles, may need host confirmation.
-- Speech recognition can miss words, so unclear clues are flagged for review instead of penalised automatically.
+
+- Detection depends on lighting, a fixed camera and high-contrast colours.
+- Marbles hidden in holes or overlapping may need host confirmation.
 - AI judgements are decision support for the host, not a perfect referee.
 
-## Tips for best results
-- Fix the camera on a tripod or stand.
-- Use high-contrast marbles and bright bibs and balls.
-- Mark the lines, holes and goals with tape or cones.
-- Play in a quiet space for clue detection.
 
-## Team
-Made for **Family AI Game Day**. Add your name and team here.
+## Credits
+
+Built using Base44. 
 
 ---
 *La'batna (لعبتنا): because the best games are the ones we play together.*
