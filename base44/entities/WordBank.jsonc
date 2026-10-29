@@ -1,0 +1,45 @@
+{
+  "name": "WordBank",
+  "type": "object",
+  "properties": {
+    "word": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "animals",
+        "food",
+        "places",
+        "objects",
+        "jobs",
+        "gulf_culture"
+      ]
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "forbidden_words": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "word",
+    "category",
+    "level"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

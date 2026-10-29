@@ -1,0 +1,88 @@
+{
+  "name": "GameSession",
+  "type": "object",
+  "properties": {
+    "game_key": {
+      "type": "string",
+      "enum": [
+        "teelah",
+        "sayless",
+        "football"
+      ],
+      "description": "Which game this session is playing"
+    },
+    "variation": {
+      "type": "string",
+      "default": "standard",
+      "description": "Game variation, e.g. three_holes or line for Al Teelah"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "setup",
+        "playing",
+        "finished"
+      ],
+      "default": "playing"
+    },
+    "rules_acknowledged": {
+      "type": "boolean",
+      "default": false
+    },
+    "current_round": {
+      "type": "number",
+      "default": 1
+    },
+    "team_a_name": {
+      "type": "string"
+    },
+    "team_a_color": {
+      "type": "string"
+    },
+    "team_a_color_hex": {
+      "type": "string"
+    },
+    "team_a_player_1": {
+      "type": "string"
+    },
+    "team_a_player_2": {
+      "type": "string"
+    },
+    "team_b_name": {
+      "type": "string"
+    },
+    "team_b_color": {
+      "type": "string"
+    },
+    "team_b_color_hex": {
+      "type": "string"
+    },
+    "team_b_player_1": {
+      "type": "string"
+    },
+    "team_b_player_2": {
+      "type": "string"
+    },
+    "calibration_json": {
+      "type": "string",
+      "description": "Camera calibration for the play surface (snapshot uri + start line)"
+    },
+    "ai_summary_json": {
+      "type": "string",
+      "description": "AI match summary facts such as possession and MVP"
+    },
+    "keep_recordings": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "game_key"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

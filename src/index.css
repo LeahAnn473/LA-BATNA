@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 45% 96%;
+    --foreground: 180 38% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 180 38% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 38% 11%;
+    --primary: 183 60% 18%;
+    --primary-foreground: 40 45% 96%;
+    --secondary: 40 36% 90%;
+    --secondary-foreground: 183 52% 16%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 186 13% 38%;
+    --accent: 38 72% 60%;
+    --accent-foreground: 183 55% 14%;
+    --destructive: 8 72% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 38 26% 84%;
+    --input: 38 26% 84%;
+    --ring: 183 55% 30%;
+    --chart-1: 183 55% 28%;
+    --chart-2: 38 72% 55%;
+    --chart-3: 8 72% 60%;
+    --chart-4: 160 30% 40%;
+    --chart-5: 40 40% 70%;
+    --radius: 1.25rem;
+    --font-heading: 'Fraunces', ui-serif, Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Fraunces', ui-serif, Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 40 40% 94%;
+    --sidebar-foreground: 183 40% 18%;
+    --sidebar-primary: 183 60% 18%;
+    --sidebar-primary-foreground: 40 45% 96%;
+    --sidebar-accent: 40 36% 88%;
+    --sidebar-accent-foreground: 183 55% 16%;
+    --sidebar-border: 38 26% 84%;
+    --sidebar-ring: 183 55% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-image:
+      radial-gradient(circle at 12% -10%, rgba(220, 169, 80, 0.16), transparent 45%),
+      radial-gradient(circle at 92% 0%, rgba(15, 76, 76, 0.12), transparent 42%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .arabic {
+    font-family: 'Cairo', 'Noto Kufi Arabic', ui-sans-serif, sans-serif;
+  }
+  .card-soft {
+    border-radius: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #eee4d3;
+    box-shadow: 0 22px 45px -32px rgba(14, 43, 43, 0.55);
+  }
+  .grain {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+}

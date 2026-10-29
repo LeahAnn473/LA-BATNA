@@ -1,0 +1,84 @@
+{
+  "name": "GameEvent",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "game_key": {
+      "type": "string"
+    },
+    "round_number": {
+      "type": "number"
+    },
+    "team": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "player_name": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "scored",
+        "bonus",
+        "penalty"
+      ],
+      "description": "Earned points, bonus points or a penalty"
+    },
+    "points": {
+      "type": "number",
+      "description": "Penalties are stored as negative numbers"
+    },
+    "rule_key": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "ai",
+        "host"
+      ],
+      "default": "host"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "pending"
+      ],
+      "default": "confirmed"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Spoken clue or audio transcript tied to the event"
+    },
+    "evidence_uris": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "session_id",
+    "team",
+    "points"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

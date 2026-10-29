@@ -1,0 +1,71 @@
+{
+  "name": "AiReview",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "game_key": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "clue",
+        "gesture",
+        "teelah",
+        "football"
+      ]
+    },
+    "round_number": {
+      "type": "number"
+    },
+    "secret_word": {
+      "type": "string"
+    },
+    "transcript": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "directness": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "applied",
+        "rejected",
+        "logged"
+      ],
+      "default": "pending"
+    },
+    "evidence_uris": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "payload_json": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "session_id",
+    "kind"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}
